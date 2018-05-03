@@ -5,9 +5,13 @@
         <a href="{{ "/#about" }}">
           <img class="sidebar-profile-picture" src="{{ . }}{{ if in . "//www.gravatar.com/avatar/" }}?s=110{{ end }}" alt="{{ i18n "global.author_picture" }}" />
         </a>
-        <h4 class="sidebar-profile-name">{{ $.Site.Author.name }}</h4>
+        <h4 class="sidebar-profile-name" style="font-family: Roboto; font-size: 26px">
+            {{ $.Site.Author.name }}
+        </h4>
         {{ with $.Site.Author.bio }}
-          <h5 class="sidebar-profile-bio">{{ . | markdownify }}</h5>
+          <h5 class="sidebar-profile-bio" style="font-family: Roboto; font-size: 20px">
+            {{ . | markdownify }}
+          </h5>
         {{ end }}
       </div>
     {{ end }}

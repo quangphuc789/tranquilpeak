@@ -24,7 +24,7 @@
     <meta name="author" content="{{ .Site.Author.name }}">
     <meta name="keywords" content="{{ with .Keywords }}{{ delimit . ", " }}{{ end }}{{ if .Site.Params.keywords }}, {{ delimit .Site.Params.keywords ", " }}{{ end }}">
 
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="{{.Site.Params.favicon}}">
     {{ with .RSSLink }}
       <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ . }}">
     {{ end }}
@@ -74,6 +74,9 @@
     {{ with .Site.Author.googlePlus }}
       <link rel="publisher" href="https://plus.google.com/{{ . | urlize }}">
     {{ end }}
+
+    <!--EXTERNAL SCRIPTS-->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
     <!--EXTERNAL STYLES-->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />

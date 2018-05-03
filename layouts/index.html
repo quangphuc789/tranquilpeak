@@ -8,6 +8,15 @@
         class="{{ with .Params.coverimage }}hasCover{{ end }}
                {{ if eq .Params.covermeta "out" }}hasCoverMetaOut{{ else }}hasCoverMetaIn{{ end }}
                {{ with .Params.coverCaption }}hasCoverCaption{{ end }}">
+        <!-- Mung Cuoi -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8118056608218129"
+             data-ad-slot="6785365126"
+             data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
         <section class="postShorten-group main-content-wrap">
           {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
           {{ range $paginator.Pages }}
